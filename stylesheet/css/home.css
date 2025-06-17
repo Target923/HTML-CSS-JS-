@@ -10,6 +10,23 @@
     color: darkblue;
 }
 
+#toggleButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggleButton:hover {
+    background-color: #0056b3;
+    color: yellow;
+    border: 1px solid black;
+}
+
 #styledBox {
     width: 150px;
     height: 150px;
