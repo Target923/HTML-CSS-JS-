@@ -122,3 +122,21 @@ movies.forEach((movie, index) => {
     movieItemsHtml += `<li>${index + 1}. ${movie}</li>`
 });
 movieListUl.innerHTML = movieItemsHtml;
+
+// 色を切り替える
+const toggleButton = document.getElementById('toggleButton');
+const styledBox = document.getElementById('styledBox');
+
+toggleButton.addEventListener('click', () => {
+   styledBox.classList.toggle('red');
+   
+   if (styledBox.classList.contains('red')) {
+        console.log('ボックスは赤色');
+        styledBox.classList.remove('blue');
+   } else {
+        console.log('ボックスは青色');
+        styledBox.classList.add('blue');
+   }
+
+   styledBox.classList.add('large-font');
+});

@@ -9,3 +9,23 @@
 .weather-rainy {
     color: darkblue;
 }
+
+#styledBox {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+.red {
+    background-color: red;
+    color: white;
+}
+.blue {
+    background-color: blue;
+    color: white;
+}
+.large-font {
+    font-size: 24px;
+    font-weight: bold;
+}
