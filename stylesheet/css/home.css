@@ -1,0 +1,11 @@
+.weather-sunny {
+    color: blue;
+}
+
+.weather-cloudy {
+    color: gray;
+}
+
+.weather-rainy {
+    color: darkblue;
+}

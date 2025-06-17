@@ -1,0 +1,8 @@
+npm init -y
+npm install eslint --save-dev
+install npm
+npm install eslint --save-dev
+sudo npm install eslint --save-dev
+npm -v
+npm init -y
+npm install eslint --save-dev
