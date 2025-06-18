@@ -116,7 +116,6 @@ fruitListUl.innerHTML = listItemsHtml;
 const movies = ['千と千尋の神隠し', '君の名は。', '天気の子', 'もののけ姫'];
 const movieListUl = document.getElementById('movieList');
 let movieItemsHtml = '';
-
 // array.forEach(function(要素, インデックス, 配列全体) {処理})
 movies.forEach((movie, index) => {
     movieItemsHtml += `<li>${index + 1}. ${movie}</li>`
