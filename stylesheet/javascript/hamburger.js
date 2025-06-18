@@ -3,5 +3,5 @@ const mainNavigation = document.getElementById('mainNav');
 
 hamburgerButton.addEventListener('click', () => {
     mainNavigation.classList.toggle('active');
-    hamburgerButton.classList.toggle('is-open');
+    hamburgerButton.classList.toggle('open');
 });

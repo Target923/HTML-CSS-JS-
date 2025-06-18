@@ -1,0 +1,71 @@
+/* ハンバーガーメニューを作ろう */
+#mainNav {
+    display: none;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.2, 1);
+    transform: translateY(-100%);
+}
+/* JS用クラス */
+#mainNav.active {
+    display: block;
+    transform: translateY(0);
+}
+
+#hamburgerMenu {
+    background-color: darkorchid;
+    width: 75px;
+    height: 75px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hamburgerLine {
+    background-color: black;
+    width: 40px;
+    height: 4px;
+    position: relative;
+    /* アニメーションの始まり */
+    transition: background-color 0s ease 0.4s;
+}
+.hamburgerLine::after,
+.hamburgerLine::before {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    /* 線の回転・位置 */
+    transition: transform 0.4s ease, top 0.4s ease 0.4s;
+}
+.hamburgerLine::after {
+    top: -12px
+}
+.hamburgerLine::before {
+    top: 12px
+}
+/* --- アニメーションクラス --- */
+#hamburgerMenu.open .hamburgerLine {
+    background-color: transparent; /* 透明 */
+}
+#hamburgerMenu.open .hamburgerLine::before {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 0.4s ease, transform 0.4s ease 0.4s;
+}
+#hamburgerMenu.open .hamburgerLine::after {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: top 0.4s ease, transform 0.4s ease 0.4s;
+}
