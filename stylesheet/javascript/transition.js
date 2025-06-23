@@ -2,6 +2,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.body.style.opacity = '1';
 
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('ul li a');
+    navLinks.forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+
+        if (linkPath === currentPath) {
+            link.classList.add('current-page-link');
+        } else {
+            link.classList.remove('current-page-link');
+        }
+    });
+
     const allLinks = document.querySelectorAll('a');
     allLinks.forEach(link => {
         // 同じページへの内部リンク（例: home.html -> home.html や #contact）
