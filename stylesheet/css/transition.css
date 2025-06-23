@@ -1,0 +1,11 @@
+/* ページトランジション用CSS */
+/* ページの初期状態（非表示） */
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* ページロード時のフェードイン */
+body.fade-out-page {
+    opacity: 0;
+}
