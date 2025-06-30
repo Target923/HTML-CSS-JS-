@@ -18,7 +18,7 @@ ul li a.current-page-link {
 /* ハンバーガーメニューを作ろう */
 #mainNav {
     background-color: #f4f4f4;
-    padding-top: 20px;
+    padding-top: 15px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -45,9 +45,34 @@ ul li a.current-page-link {
     font-weight: bold;
     font-size: 24px;
     margin-right: 20px;
+    position: relative;
 }
 .mainNavItem:last-child{
     margin-right: 0;
+}
+
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    background-color: #e0e0e0;
+    width: max-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 100%;
+    z-index: 101;
+}
+
+.mainNavItem.has-submenu:hover > .submenu {
+    display: block;
+}
+
+.sub-mainNavItem {
+    font-size: 20px;
+    padding-top: 5px;
+    white-space: nowrap;
 }
 
 #hamburgerMenu {
